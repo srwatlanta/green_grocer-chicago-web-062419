@@ -5,7 +5,7 @@ def consolidate_cart(cart)
     item.each do |food, info|
       if cart_hash[food]
         cart_hash[food][:count] += 1
-      else cart_hash[food]
+      else cart_hash[food] = info
         cart_hash[food][:count] = 1
       end
     end
